@@ -1,5 +1,11 @@
+@font-face {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  src: url("/fonts/BergenMono-Regular.woff2") format("opentype");
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Cochin;
+  font-size: 30px;
   line-height: 1.5;
   font-weight: 400;
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-  let videoURL = "/reversed.mp4";
+  let videoURL = "/main.mp4";
 
   let time = 0;
   let duration;
@@ -23,79 +23,58 @@
     muted
     src="{videoURL}"
   />
-  <!--
-      alternative source:
-      src="https://int.nyt.com/newsgraphics/2020/beirut-explosion-video/main/warehouse-800.mp4" 
-    -->
 </div>
+
 <div id="scroll-container">
-  <div class="heading">
-    <h1>Video Scroll Tutorial</h1>
-    <p>Using Svelte bindings to make our frontend lives easier</p>
-  </div>
-  <div class="str str1">
+
+  <div class="str strange" style="top:100px;">
     <p>
-      Data ordinarily flows down, from parent to child. The bind: directive
-      allows data to flow the other way, from child to parent. Most bindings are
-      specific to particular elements. The simplest bindings reflect the value
-      of a property, such as input.value.
-    </p>
-    <p>
-      If the name matches the value, you can use a shorthand.<br /><br />
-      Numeric input values are coerced; even though input.value is a string as
-      far as the DOM is concerned, Svelte will treat it as a number. If the
-      input is empty or invalid (in the case of type="number"), the value is
-      undefined.
+      Have you ever thrown away a food beacause you forgot its premumption date ?
     </p>
   </div>
 
-  <div class="str str2">
+  <div class="str" style="top:500px;left:17vw;">
     <p>
-      Binding
-      {`<select>`}
-      value<br />
-
-      {`
-        A <select> value binding corresponds to the value property 
-        on the selected <option>, which can be any value (not just 
-        strings, as is normally the case in the DOM).
-      `}
-    </p>
-    <p>
-      {`
-        A <select multiple> element behaves similarly to a checkbox group.
-        When the value of an <option> matches its text content, the attribute can be omitted.
-        Elements with the contenteditable attribute support innerHTML and textContent bindings.
-      `}
+      Well, we have <span style="font-weight: bold;">ALL</span> done that ...
     </p>
   </div>
 
-  <div class="str str3">
+  <div class="str" style="top:900px;">
     <p>
-      Media element bindings
-      <br /><br />
-      {`
-        Media elements (<audio> and <video>) have their own set of bindings 
-        — six readonly ones...
+      But let's change this NOW
+    </p>
+  </div>
 
-        duration (readonly) — the total duration of the video, in seconds
-        buffered (readonly) — an array of {start, end} objects
-        played (readonly) — ditto
-        seekable (readonly) — ditto
-        seeking (readonly) — boolean
-        ended (readonly) — boolean
-      `}
-    </p>
+  <div class="str" style="top:1300px;transform : translate(50%,0);">
     <p>
-      ...and five two-way bindings:<br /><br />
-      currentTime — the current playback time in the video, in seconds<br />
-      playbackRate — how fast or slow to play the video, where 1 is 'normal'<br />
-      paused — this one should be self-explanatory volume — a value between 0<br />
-      and 1 muted — a boolean value where true is muted
-      <br />
-      <br />
-      Videos additionally have readonly videoWidth and videoHeight bindings.<br />
+      Ok, but HOW ? Let us show you
     </p>
+  </div>
+
+  <div class="str" style="top:1700px;">
+    <p>Discover your new stock management APP to reduce food waste !</p>
+  </div>
+
+
+  <div class="heading" style="top:2200px;">
+    <h1>FOODSTOCK</h1>
+  </div>
+
+  <div class="str" style="top:2500px;">
+    <p>Foodstock is a web application built for mobile users which allows you to :</p>
+  </div>
+
+  <div class="str" style="top:2650px;">
+    <ul>
+    <li>Monitor your fridge and drawers at any time</li>
+    <li>Receive notification when food is about to expire</li>
+    <li>Build your shopping list while not being at home</li>
+  </ul>
+  </div>
+
+  <div class="str" style="top:2900px;">
+    <p>Start now using our free plan !</p>
+    <a href="https://welcome.foodstock.com" class="button">Try</a>
   </div>
 </div>
 
@@ -119,12 +98,11 @@
   }
 
   #scroll-container {
-    height: 5000px;
+    height: 3200px;
   }
 
   .heading {
     position: absolute;
-    top: 200px;
     left: 10px;
     width: 100%;
     text-align: center;
@@ -137,7 +115,7 @@
   }
   .str {
     position: absolute;
-    display: flex;
+    display: block;
     flex-wrap: wrap;
     left: 50%;
     transform: translate(-50%, 0);
@@ -145,27 +123,24 @@
     opacity: 0.8;
   }
 
-  .str p {
-    color: white;
-    background-color: black;
-    padding: 2em;
-    min-width: 20em;
+  .strange {
+    background-color: grey;
+    border-radius: 20px;
   }
 
-  .str p:nth-child(2) {
-    background-color: white;
-    color: black;
+  ul {
+    list-style-type: none;
   }
 
-  .str1 {
-    top: 1000px;
+  li {
+
   }
 
-  .str2 {
-    top: 2500px;
-  }
-
-  .str3 {
-    top: 4000px;
+  .button {
+    background-color: greenyellow;
+    color : white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
   }
 </style>
