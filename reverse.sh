@@ -1,0 +1,1 @@
+ffmpeg -i public/main.avi -vf reverse public/reversed.mp4   
